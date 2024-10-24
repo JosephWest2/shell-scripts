@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+tmux new-session -d -s editor
+tmux setw -g mouse on
+tmux split-window -h
+tmux resize-pane -R 30
+tmux select-pane -L
+tmux send-keys 'nvim' C-m
+tmux attach -t editor
